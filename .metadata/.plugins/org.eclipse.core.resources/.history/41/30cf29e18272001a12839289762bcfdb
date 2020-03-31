@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%@page import="java.util.List"%>
+<%@page import="persist.Ehdokkaat"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<%List <Ehdokkaat> e=(List <Ehdokkaat>)request.getAttribute("Ehdokkaat"); %>
+
+
+
+<body>
+<table>
+
+<% for(Ehdokkaat eh:e){ %>
+<tr>
+
+
+</tr>
+
+<%}%>>
+
+</table>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%@page import="java.util.List"%>
+<%@page import="persist.Ehdokkaat"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<%List <Ehdokkaat> e=(List <Ehdokkaat>)request.getAttribute("Ehdokkaat"); %>
+
+
+
+<body>
+<table>
+
+<% for(Ehdokkaat eh:e){ %>
+<form action="MyServlet" method="get">
+<tr>
+<td><input type="text" value=<%=eh.getEhdokasId() %>></td>
+<td><input type="text" value=<%=eh.getSukunimi() %>></td>
+<td><input type="text" value=<%=eh.getEtunimi() %>></td>
+</tr>
+<input type="submit" value="Edit">
+<input type="submit" value="Delete">
+</form>
+<%}%>
+
+</table>
+
+
+
+
+</body>
+</html>
